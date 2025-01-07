@@ -364,9 +364,48 @@ body {
 }
 }
 
+@media (max-width: 1900px) and (min-width: 900px){
+  body{
+    .proyect-info{
+      @include flex-row();
+      position: static;
+      height: auto;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+  
+    .proyecto{
+      width: 25%;
+      position: static;
+      z-index: 1;
+      margin: 2% 0;
+          .boton{
+        button{
+          width: 20vw;
+          height: 6vh;
+        }
+      }
+    }
+
+    .go-top{
+
+      .top1-button{
+        width: 8vw;
+        height: 7vh;
+        right: 1%;
+        top: 90%;
+        i{
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
 
 
-@media screen and (max-width: 768px){
+
+@media (max-width: 900px) and (min-width: 700px){
   body{
     .principal{
       
@@ -463,4 +502,97 @@ body {
 
 
 
+@media screen and (max-width: 700px){
+body{
 
+  .principal{
+    .text{
+      width: 100%;
+      align-items: center;
+      .boton{
+        position: static;
+        button{
+         width: 30vw;
+         height: 6vh;
+        }
+       }
+    }
+    .imagen{
+      display: none;
+    }
+  }
+  .proyect-info{
+    @include flex-col();
+    position: static;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .proyecto{
+    width: 90%;
+    position: static;
+    z-index: 1;
+    margin: 2% 0;
+        .boton{
+      button{
+        width: 20vw;
+        height: 6vh;
+      }
+    }
+  }
+
+
+  .trainingh1{
+    padding: 3% 0 1% 0;
+  }
+  .training-content{
+    width: 85%;
+  }
+
+  .desplegable{
+    font-size: 4rem;
+    
+  }
+  .barra{
+    justify-content: center;
+
+    .lista-nav{
+      @include flex-col();
+      height: auto;
+
+
+      a{
+        font-size: 1.5rem;
+        padding: 2% 0;
+      }
+
+
+    }
+  }
+  .navmini{
+    color: $secondary-color;
+  }
+
+
+
+  footer{
+    .navegacion{
+      display: none;
+    }
+    .social{
+      font-size: 3rem;
+      width: 70%;
+    }
+  }
+
+  .go-top{
+
+    .top1-button{
+      right: 8%;
+      top: 90%;
+    }
+  }
+}
+}

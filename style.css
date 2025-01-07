@@ -319,7 +319,36 @@ body .formulario .contenido {
   box-shadow: 0 0 15px #ff6600;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1900px) and (min-width: 900px) {
+  body .proyect-info {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body .proyecto {
+    width: 25%;
+    position: static;
+    z-index: 1;
+    margin: 2% 0;
+  }
+  body .proyecto .boton button {
+    width: 20vw;
+    height: 6vh;
+  }
+  body .go-top .top1-button {
+    width: 8vw;
+    height: 7vh;
+    right: 1%;
+    top: 90%;
+  }
+  body .go-top .top1-button i {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 900px) and (min-width: 700px) {
   body .principal .text {
     width: 100%;
     align-items: center;
@@ -387,5 +416,74 @@ body .formulario .contenido {
   }
   body .navmini {
     color: rgb(234, 234, 234);
+  }
+}
+@media screen and (max-width: 700px) {
+  body .principal .text {
+    width: 100%;
+    align-items: center;
+  }
+  body .principal .text .boton {
+    position: static;
+  }
+  body .principal .text .boton button {
+    width: 30vw;
+    height: 6vh;
+  }
+  body .principal .imagen {
+    display: none;
+  }
+  body .proyect-info {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  body .proyecto {
+    width: 90%;
+    position: static;
+    z-index: 1;
+    margin: 2% 0;
+  }
+  body .proyecto .boton button {
+    width: 20vw;
+    height: 6vh;
+  }
+  body .trainingh1 {
+    padding: 3% 0 1% 0;
+  }
+  body .training-content {
+    width: 85%;
+  }
+  body .desplegable {
+    font-size: 4rem;
+  }
+  body .barra {
+    justify-content: center;
+  }
+  body .barra .lista-nav {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  body .barra .lista-nav a {
+    font-size: 1.5rem;
+    padding: 2% 0;
+  }
+  body .navmini {
+    color: rgb(234, 234, 234);
+  }
+  body footer .navegacion {
+    display: none;
+  }
+  body footer .social {
+    font-size: 3rem;
+    width: 70%;
+  }
+  body .go-top .top1-button {
+    right: 8%;
+    top: 90%;
   }
 }/*# sourceMappingURL=style.css.map */
