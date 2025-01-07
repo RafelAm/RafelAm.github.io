@@ -1,0 +1,19 @@
+
+@mixin borde(){
+    border-bottom: 4px solid $primary-color;
+}
+
+@mixin flex-row(){
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-col(){
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin noMarNoPad(){
+    padding: 0;
+    margin: 0;
+}

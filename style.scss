@@ -1,0 +1,466 @@
+@import "variables", "mixins";
+
+body {
+  background-color: $secondary-color;
+
+
+  // Botón para volver arriba
+  .go-top {
+    position: relative;
+    background-color: $light-background-color;
+    z-index: 1;
+    @include noMarNoPad();
+    .top1-button {
+      position: fixed;
+      background-color: transparent;
+      border: 0;
+      width: 4vw;
+      height: 6vh;
+      right: 0;
+      top: 93%;
+      i {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .icono-top {
+    color: $primary-color;
+    text-shadow: 0 0 20px #ff6600;
+  }
+
+  // Barra de navegación
+  .barra {
+    @include noMarNoPad();
+    ul {
+      @include flex-row();
+      @include noMarNoPad();      
+      height: 5vh;
+      list-style: none;
+      background-color: $dark-background-color;
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 0 1%;
+        height: 100%;
+        li {
+          height: 100%;
+          @include flex-row();
+          align-items: center;
+        }
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+    }
+  }
+
+
+ // HeroSection
+  .principal {
+    @include flex-row();
+    height: 70vh;
+    position: relative;
+    .text {
+      @include flex-col();
+      justify-content: center;
+      align-items: end;
+      z-index: 1;
+      width: 50%;
+      h1 {
+        color: $primary-color;
+        text-shadow: 0 0 20px #ff6600;
+      }
+      h3 {
+        color: $secondary-color;
+      }
+      .boton {
+        position: absolute;
+        right: 62%;
+        top: 60%;
+        button {
+          border: 0;
+          background: linear-gradient(45deg, #ffa500, #ff6600);
+          width: 9vw;
+          height: 5vh;
+          border-radius: 3vh;
+          transition: box-shadow 0.3s;
+          a {
+            text-decoration: none;
+            color: $secondary-color;
+          }
+          &:hover {
+            background: linear-gradient(30deg, #ffa500, #ff6600);
+            box-shadow: 0 0 20px #ff6600;
+          }
+        }
+      }
+    }
+    .imagen {
+      position: relative;
+      width: 50%;
+      height: auto;
+
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+
+
+
+  .proyecto {
+    @include flex-col();
+    position: absolute;
+    background-color: $dark-background-color;
+    color: $primary-color;
+    width: 25%;
+    border: 1px solid $primary-color;
+    padding: 0 0 1% 0;
+
+
+
+    h2 {
+      text-shadow: 0 0 20px #ff6600;
+    }
+  
+    P {
+      padding: 0 10%;
+      text-align: justify;
+      color: $secondary-color;
+    }
+    h4 {
+      padding: 0 10%;
+      text-align: center;
+      color: $primary-color;
+    }
+    ul {
+      background-color: $light-background-color;
+      border: 1px solid $secondary-color;
+  
+      align-self: center;
+      padding: 0;
+      width: 80%;
+  
+      li {
+        margin: 0 0 0 10%;
+        font-size: 1.2rem;
+        color: $secondary-color;
+        &::marker {
+          color: $primary-color;
+        }
+      }
+    }
+    .boton {
+      align-self: center;
+      button {
+        border: 0;
+        background: linear-gradient(45deg, #ffa500, #ff6600);
+        width: 7vw;
+        height: 4vh;
+        border-radius: 3vh;
+        transition: box-shadow 0.3s;
+        a {
+          display: block;
+          width: 100%;
+          text-decoration: none;
+          color: $secondary-color;
+        }
+        &:hover {
+          background: linear-gradient(30deg, #ffa500, #ff6600);
+          box-shadow: 0 0 20px #ff6600;
+        }
+      }
+    }
+  }
+
+
+  .proyect-info  {
+    @include flex-row();
+      position: relative;
+      width: 100%;
+      height: 15vh;
+      bottom: 12%;
+      justify-content: space-evenly;
+      transform: translateX(-100%);
+      opacity: 0;
+      animation: aparecer 1.5s forwards;
+      @keyframes aparecer {
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+    .info-2 {
+      left: 5%;
+    }
+    .info-3 {
+      right: 5%;
+    }
+
+
+
+
+
+
+  .progress-bar-vertical {
+    @include flex-row();
+    width: 30px;
+    min-height: 40vh;
+    background: #d0cece;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: end;
+    -webkit-align-items: end;
+  }
+  
+  .progress-bar-vertical .progress-bar {
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 0.6s ease;
+    -o-transition: height 0.6s ease;
+    transition: height 0.6s ease;
+    background-color: $primary-color;
+  }
+
+
+  .training {
+    @include flex-row();
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-background-color;
+  }
+  .trainingh1 {
+    padding: 8% 0 1% 0;
+  }
+
+  .training-content {
+    @include flex-row();
+    width: 75%;
+    background-color: $dark-background-color;
+    border: 1px solid $primary-color;
+    .titulos {
+      color: $secondary-color;
+    }
+  }
+
+
+
+  footer{
+    @include flex-col();
+    align-items: center;
+    justify-content: center;
+    background-color: $light-background-color;
+    width: 100%;
+    padding: 2% 0 0 0 ;
+    .social{
+      width: 30%;
+      @include flex-row();
+      font-size: 2.2rem;
+      color: $secondary-color;
+      justify-content: space-around;
+    }
+
+    .navegacion{
+      @include flex-row();
+      justify-content: center;
+      font-size: 1.2rem;
+
+      width: 30%;
+      a:nth-child(1){
+        padding: 0 2%;
+      }
+      a:nth-child(2){
+        padding: 0 2% 0 0;
+      }
+      a{
+        color: $secondary-color;
+        text-decoration: none;
+
+        &:hover{
+          color: $primary-color;
+          text-shadow: 0 0 20px #ff6600;
+        }
+      }
+
+    }
+
+    .copy{
+      padding: 1% 0 0 0;
+      font-size: 1rem;
+      color: $secondary-color;
+    }
+
+  }
+
+
+
+
+  .fondo-claro {
+    background-color: $light-background-color;
+  }
+
+  .fondo-oscuro {
+    background-color: $dark-background-color;
+  }
+
+
+  .borde {
+    @include borde();
+  }
+
+  .links{
+    color: $secondary-color;
+
+    &:hover{
+      color: $primary-color;
+      text-shadow: 0 0 20px #ff6600;
+    }
+  }
+
+
+
+  ::selection{
+    color: $primary-color;
+  }
+
+  .send-button{
+    border: 0;
+    background: linear-gradient(45deg, #ffa500, #ff6600);
+    padding: 1.5% 2%;
+    border-radius: 0.375rem;
+    color: $secondary-color;
+    &:hover{
+      box-shadow: 0 0 15px #ff6600;
+    }
+  }
+
+.close-button{
+  background-color: gray;
+  color: $secondary-color;
+  padding: 1.5% 2%;
+  border-radius: 0.375rem;
+  border: 0;
+  &:hover{
+    box-shadow: 0 0 15px gray;
+  }
+}
+
+.formulario{
+  color: $secondary-color;
+  
+  .contenido{
+    border: 1px solid $primary-color;
+    box-shadow: 0 0 15px #ff6600;
+  }
+}
+}
+
+
+
+@media screen and (max-width: 768px){
+  body{
+    .principal{
+      
+      .text{
+        width: 100%;
+        align-items: center;
+        .boton{
+          position: static;
+          button{
+           width: 30vw;
+           height: 6vh;
+          }
+         }
+      }
+      .imagen{
+        display: none;
+      }
+    }
+
+    .proyect-info{
+      justify-content:flex-end;
+      padding: 0 4%;
+      .info-3{
+        display: none;
+      }
+    }
+
+    .proyecto{
+      width: 45%;
+
+      .boton{
+        button{
+          width: 20vw;
+          height: 6vh;
+        }
+      }
+    }
+  
+    .trainingh1{
+      padding: 34% 0 1% 0;
+    }
+    .training-content{
+      width: 85%;
+    }
+
+    footer{
+      .navegacion{
+        display: none;
+      }
+      .social{
+        font-size: 3rem;
+        width: 70%;
+      }
+    }
+
+
+    .go-top{
+
+      .top1-button{
+        width: 8vw;
+        height: 7vh;
+        right: 6%;
+        top: 90%;
+        i{
+          font-size: 4rem;
+        }
+      }
+    }
+
+    .desplegable{
+      font-size: 4rem;
+      
+    }
+
+    .barra{
+      justify-content: center;
+
+      .lista-nav{
+        @include flex-col();
+        height: auto;
+
+
+        a{
+          font-size: 1.5rem;
+          padding: 2% 0;
+        }
+      }
+    }
+    .navmini{
+      color: $secondary-color;
+    }
+  }
+}
+
+
+
+
